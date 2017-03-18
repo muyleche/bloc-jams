@@ -1,5 +1,5 @@
 body.album {
-  background: transparent url(../assets/images/blurred_backgrounds/blur_bg_3.jpg) no-repeat center center;
+  background: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg) no-repeat fixed center center;
   background-size: cover;
 }
 
@@ -37,22 +37,37 @@ body.album {
   font-weight: 300;
   font-size: 0.75rem;
   border-collapse: collapse;
+  cursor: default;
+}
+
+.album-view-song-list thead {
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  font-weight: 600;
 }
 
 .album-view-song-item {
   height: 3rem;
   border-bottom: 1px solid rgba(255,255,255,0.5);
+  transition: background-color ease 0.15s;
 }
 
-.song-item-number {
+.album-view-song-item:hover {
+  background-color: rgba(0,0,0,0.2); 
+}
+
+.album-view-song-list thead .song-item-number {
   width: 5%;
 }
 
-.song-item-title {
-  width: 85%;
+.album-view-song-list thead .song-item-title {
+  width: 80%;
 }
 
-.song-item-duration {
+.album-view-song-list thead .song-item-duration {
+  width: 10%;
+}
+
+.album-view-song-list thead .song-item-play-count {
   width: 5%;
 }
 

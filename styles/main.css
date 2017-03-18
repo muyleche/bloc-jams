@@ -28,6 +28,7 @@ body {
   left: 2rem;
   top: 0.25rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .sound-bars {

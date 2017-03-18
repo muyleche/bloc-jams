@@ -65,6 +65,7 @@ body.album {
 
 .album-view-song-list thead .song-item-duration {
   width: 10%;
+  padding-right: 10px;
 }
 
 .album-view-song-list thead .song-item-play-count {

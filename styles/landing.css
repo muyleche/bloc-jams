@@ -22,21 +22,7 @@ body.landing {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  
-  animation-duration: 0.45s;
-  animation-name: pulseShadow;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes pulseShadow {
-  from {
-  text-shadow: 1px 1px 1px rgb(58,23,63);
-  }
-
-  to {
-  text-shadow: 2px 2px 4px rgb(58,23,63);
-  }
+  text-shadow: 2px 2px 2px rgb(58,23,63);
 }
 
 .arrow {

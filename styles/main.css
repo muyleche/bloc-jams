@@ -18,7 +18,7 @@ body {
 .navbar {
   position: relative;
   padding: 0.5rem;
-  background: rgba(101,18,95,0.2);
+  background: rgba(101,18,95,0.5);
   z-index: 1;
   border-bottom: 1px solid rgba(75,25,65,0.3);
 }
@@ -30,59 +30,6 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-
-.sound-bars {
-  display: inline-block;
-  margin-bottom: 15px;
-  margin-left: 40px;
-  width: 40px;
-  height: 40px;
-  transform: rotateZ(180deg);
-}
-
-.sound-bars .bar {
-  padding: 0;
-  margin: 2px;
-  float: left;
-  width: calc(25% - 4px);
-  bottom: 0px;
-  background-color: rgba(233,50,117,0.3);
-}
-
-.bar1 {
-  animation-duration: 0.6s;
-  animation-name: growUp;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.bar2 {
-  animation-duration: 0.5s;
-  animation-name: growUp;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.bar3 {
-  animation-duration: 0.8s;
-  animation-name: growUp;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.bar4 {
-  animation-duration: 0.7s;
-  animation-name: growUp;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes growUp {
-  from {
-    height: 20%;
-  }
-  to {
-    height: 90%
-  }
-}
-
 
 .navbar .links-container {
   display: table;

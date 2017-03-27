@@ -1,21 +1,25 @@
-var collectionTemplate = 
+
+var createAlbumItem = function(album) {
+  var template = 
     '<div class="collection-album-container column fourth">'
   + '    <a href="album.html">'
   + '      <div class="image-container">'
-  + '         <img src="assets/images/album_covers/01.png"/>'
-  + '         <div class="label">X songs</div>'
+  + '         <img src="' + album.albumArtUrl + '">'
+  + '         <div class="label">' + album.songs.length + ' songs</div>'
   + '      </div>'
+  + '      <p class="caption">'
+  + '        <span class="album-name">' + album.title + '</span>'
+  + '        <br/>' + album.artist
+  + '      </p>'
   + '    </a>'
-  + '    <p class="caption">'
-  + '      <a class="album-name" href="album.html">The Colors</a>'
-  + '      <br/>'
-  + '      Pablo Picasso'
-  + '    </p>'
   + '  </div>';
+  return template;
+}
+
 window.onload = function () {
   var collectionContainer = document.getElementsByClassName('album-covers')[0];
   collectionContainer.innerHTML = '';
-  for (var i = 0; i < 12; i++) {
-    collectionContainer.innerHTML += collectionTemplate;
-  }
+  forEach(albums, function(albumItem) {
+    collectionContainer.innerHTML += createAlbumItem(albumItem);
+  });
 };

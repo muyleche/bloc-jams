@@ -56,20 +56,53 @@ body.album {
 }
 
 .album-view-song-list thead .song-item-number {
-  width: 5%;
+  width: 4%;
+}
+
+.album-view-song-list thead .play-button {
+  width: 6%;
 }
 
 .album-view-song-list thead .song-item-title {
-  width: 80%;
+  width: 75%;
 }
 
 .album-view-song-list thead .song-item-duration {
-  width: 10%;
+  width: 8%;
   padding-right: 10px;
 }
 
 .album-view-song-list thead .song-item-play-count {
-  width: 5%;
+  width: 7%;
+}
+
+.album-view-song-item .song-item-title {
+  position: relative;
+}
+
+.play-button > * {
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.play-image {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.playing .play-image {
+  display:none;
+}
+
+.pause-image {
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.playing .pause-image {
+  display: block;
 }
 
 @media (max-width: 640px) and (min-width: 320px) {
@@ -79,6 +112,64 @@ body.album {
   
   .album-view-title {
     margin-top: 0;
+  }
+}
+
+.playing .sound-bars {
+  display: block;
+}
+
+.sound-bars {
+  display: none;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 0 15px;
+  right: 0;
+  transform: rotateZ(180deg) translateY(75%);
+}
+
+
+.sound-bars .bar {
+  padding: 0;
+  margin: 1px;
+  float: left;
+  width: calc(25% - 2px);
+  bottom: 0px;
+  background-color: rgba(233,50,117,0.5);
+}
+
+.bar1 {
+  animation-duration: 0.6s;
+  animation-name: growUp;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.bar2 {
+  animation-duration: 0.5s;
+  animation-name: growUp;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.bar3 {
+  animation-duration: 0.8s;
+  animation-name: growUp;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.bar4 {
+  animation-duration: 0.7s;
+  animation-name: growUp;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes growUp {
+  from {
+    height: 20%;
+  }
+  to {
+    height: 90%
   }
 }
 

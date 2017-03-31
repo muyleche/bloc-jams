@@ -31,8 +31,12 @@ function getHtmlQueryAsJson () {
 }
 
 function getFirstParentByClassName (element, className) {
-  while (element && !element.classList.contains(className)) {
-    element = element.parentElement;
+  if (!element) {console.log('No parent found');}
+  else {
+    while (element && !element.classList.contains(className)) {
+      element = element.parentElement;
+    }
+    if (!element) {console.log('No parent found with class name: '+className);}
   }
   return element;
 }

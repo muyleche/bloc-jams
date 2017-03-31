@@ -56,11 +56,12 @@ body.album {
 }
 
 .album-view-song-list thead .song-item-number {
-  width: 4%;
+  width: 5%;
+  min-width: 36px;
 }
 
-.album-view-song-list thead .play-button {
-  width: 6%;
+.album-view-song-item .song-item-number {
+  text-align: center;
 }
 
 .album-view-song-list thead .song-item-title {
@@ -68,41 +69,34 @@ body.album {
 }
 
 .album-view-song-list thead .song-item-duration {
-  width: 8%;
+  width: 10%;
   padding-right: 10px;
 }
 
 .album-view-song-list thead .song-item-play-count {
-  width: 7%;
+  width: 10%;
 }
 
 .album-view-song-item .song-item-title {
   position: relative;
 }
 
-.play-button > * {
-  position: absolute;
-  transform: translateY(-50%);
+.album-song-button {
+  text-align: center;
+  font-size: 14px;
+  background-color: white;
+  color: rgb(210, 40, 123);
+  border-radius: 50% 50%;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
 }
 
-.play-image {
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.playing .play-image {
-  display:none;
-}
-
-.pause-image {
-  display: none;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.playing .pause-image {
-  display: block;
+.album-song-button:hover {
+  cursor: pointer;
+  background-color: rgb(210, 40, 123);
+  color: white;
 }
 
 @media (max-width: 640px) and (min-width: 320px) {
@@ -129,14 +123,13 @@ body.album {
   transform: rotateZ(180deg) translateY(75%);
 }
 
-
 .sound-bars .bar {
   padding: 0;
   margin: 1px;
   float: left;
   width: calc(25% - 2px);
   bottom: 0px;
-  background-color: rgba(233,50,117,0.5);
+  background-color: rgba(233,50,117,0.75);
 }
 
 .bar1 {

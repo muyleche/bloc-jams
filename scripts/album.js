@@ -49,7 +49,7 @@ var setCurrentAlbum = function (album) {
 };
 
 window.onload = function() {
-  setCurrentAlbum(albums[0]);
+  setCurrentAlbum(albums[parseInt(getHtmlQueryAsJson().albumIndex)]);
   
   document.getElementsByClassName('album-view-song-list')[0].addEventListener('mouseover', function(event) {
     var target = event.target.parentElement;

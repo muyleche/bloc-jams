@@ -29,3 +29,10 @@ function getHtmlQueryAsJson () {
   }
   return result;
 }
+
+function getFirstParentByClassName (element, className) {
+  while (element && !element.classList.contains(className)) {
+    element = element.parentElement;
+  }
+  return element;
+}

@@ -61,7 +61,7 @@ body.album {
 }
 
 .album-view-song-item .song-item-number {
-  text-align: center;
+/*  text-align: center;*/
 }
 
 .album-view-song-list thead .song-item-title {
@@ -83,6 +83,7 @@ body.album {
 
 .album-song-button {
   text-align: center;
+  text-indent: 1px;
   font-size: 14px;
   background-color: white;
   color: rgb(210, 40, 123);
@@ -133,28 +134,32 @@ body.album {
 }
 
 .bar1 {
-  animation-duration: 0.6s;
+  animation-duration: 0.85s;
   animation-name: growUp;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-timing-function: linear;
 }
 .bar2 {
-  animation-duration: 0.5s;
+  animation-duration: 0.7s;
   animation-name: growUp;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-timing-function: linear;
 }
 .bar3 {
   animation-duration: 0.8s;
   animation-name: growUp;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-timing-function: linear;
 }
 .bar4 {
-  animation-duration: 0.7s;
+  animation-duration: 0.75s;
   animation-name: growUp;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-timing-function: linear;
 }
 
 @keyframes growUp {

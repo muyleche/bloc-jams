@@ -6,10 +6,10 @@ function forEach(array, handler) {
 }
 
 // Function to pad a number with the zeros until it is as many characters long as desired.
-Number.prototype.pad = function (num) {
-  var string = this.toString(),
+function numberPad(number, digits = 0) {
+  var string = number.toString(),
       i;
-  for (i = 0; i < (num - this.toString().length); i++) {
+  for (i = 0, digits -= string.length; i < digits; i++) {
     string = "0" + string;
   }
   return string;

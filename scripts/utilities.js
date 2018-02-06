@@ -20,7 +20,7 @@ function getHtmlQueryAsJson () {
   var query = location.search.substring(1),
       params = query.split('&'),
       paramLength = params.length,
-      i, 
+      i,
       split,
       result = {};
   for (i = 0; i < paramLength; i++) {
@@ -30,13 +30,10 @@ function getHtmlQueryAsJson () {
   return result;
 }
 
+// Function to get the first parent of the provided element that has the provided class name. If there are no matches, null is returned.
 function getFirstParentByClassName (element, className) {
-  if (!element) {console.log('No parent found');}
-  else {
-    while (element && !element.classList.contains(className)) {
-      element = element.parentElement;
-    }
-    if (!element) {console.log('No parent found with class name: '+className);}
+  if (element && !element.classList.contains(className)) {
+    element = getFirstParentByClassName(element.parentElement, className);
   }
   return element;
 }
